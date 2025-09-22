@@ -1,51 +1,45 @@
-<footer class="footer">
+<footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Categories Section -->
+            <section>
+                <h4 class="text-white text-lg font-semibold mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Electronics</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Fashion</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Home & Living</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Sports</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Books</a></li>
+                </ul>
+            </section>
 
-    <div class="footer-content">
-        <section class="footer-section categories">
-            <h4>1</h4>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-            </ul>
-        </section>
+            <!-- Store Information -->
+            <section>
+                <h4 class="text-white text-lg font-semibold mb-4">Our Stores</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Store Locator</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Opening Hours</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Current Deals</a></li>
+                </ul>
 
-        <section class="footer-section stores">
-            <h4>2</h4>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
+                <h4 class="text-white text-lg font-semibold mt-6 mb-4">Customer Service</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+                </ul>
+            </section>
 
-            <h4>3</h4>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-            </ul>
-        </section>
-
-        <section class="footer-section about">
-            <h4>4</h4>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-            </ul>
-        </section>
+            <!-- About Section -->
+            <section>
+                <h4 class="text-white text-lg font-semibold mb-4">About Us</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </section>
+        </div>
     </div>
 </footer>
