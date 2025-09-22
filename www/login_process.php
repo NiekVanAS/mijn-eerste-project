@@ -12,17 +12,15 @@ if (isset($_SESSION['user_id'])) {
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
     
     try {
-        
         $stmt = $conn->prepare("SELECT * FROM Users WHERE email = ?");
         $stmt->execute([$email]);
         $user = $stmt->fetch();
         
-        if ($password == $user['password']) {
+        if ($user && password_verify($password, $user['password'])) {
             // Login successful
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['firstname'] = $user['firstname'];
@@ -31,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             
             header("Location: index.php");
-
             exit();
         } else {
             // Login failed

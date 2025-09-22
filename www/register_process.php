@@ -1,5 +1,6 @@
 <?php
 require 'database.php';
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
@@ -30,16 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $stmt->execute([$country, $city, $street, $house_number, $zipcode]);
     $address_id = $conn->lastInsertId();
 
-    if($is_admin && isset($_SESSION['admin_id'])) {
-        $stmt = $conn->prepare("INSERT INTO Administrators start_date) VALUES (NOW())");
+    if($is_admin == 1 && isset($_SESSION['admin_id'])) {
+        $stmt = $conn->prepare("INSERT INTO Administrators (start_date) VALUES (NOW())");
         $stmt->execute();
         $admin_id = $conn->lastInsertId();
     }
     else {
         $admin_id = null;
+        $stmt = $conn->prepare("INSERT INTO Customers (creation_date) VALUES (NOW())");
+        $stmt->execute();
+        $customer_id = $conn->lastInsertId();
+
     }
-    $stmt = $conn->prepare("INSERT INTO Users (firstname, lastname, email, password, address_id, admin_id) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute([$firstname, $lastname, $email, $hashed_password, $address_id, $admin_id]);
+    $stmt = $conn->prepare("INSERT INTO Users (firstname, lastname, email, password, address_id, admin_id, customer_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$firstname, $lastname, $email, $hashed_password, $address_id, $admin_id, $customer_id]);
 
     header("Location: login.php?success=registered");
     exit();
