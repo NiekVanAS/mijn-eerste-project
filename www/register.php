@@ -20,7 +20,7 @@
         <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
             <h2 class="text-2xl font-bold mb-6">Register</h2>
 
-            <form action="process_register.php" method="POST" class="space-y-4">
+            <form action="register_process.php" method="POST" class="space-y-4">
                 <section class="container mx-auto px-4 py-8">
                     <div>
                         <label class="block text-gray-700">first name</label>
@@ -44,6 +44,11 @@
                         <label class="block text-gray-700">city </label>
                         <input type="text" name="city" required class="w-full border border-gray-300 p-2 rounded">
                     </div>
+                    <div>
+                        <label class="block text-gray-700">street </label>
+                        <input type="text" name="street" required class="w-full border border-gray-300 p-2 rounded">
+                    </div>
+                    
 
                     <div>
                         <label class="block text-gray-700">house_number </label>

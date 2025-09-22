@@ -1,17 +1,7 @@
 <footer class="bg-gray-900 text-gray-300">
     <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Categories Section -->
-            <section>
-                <h4 class="text-white text-lg font-semibold mb-4">Categories</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition-colors">Electronics</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Fashion</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Home & Living</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Sports</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Books</a></li>
-                </ul>
-            </section>
+           
 
             <!-- Store Information -->
             <section>
